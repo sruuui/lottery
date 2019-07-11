@@ -79,7 +79,6 @@ public class LotteryUtil {
 		
 		for (int i = 0; i < num; i++) {
 			int Index = LotteryUtil.lottery(cards,pro);
-			//int Index = LotteryUtil.lottery_easy(cards,pro);
  			Integer value = count.get(Index);
 			count.put(Index, value == null ? 1 : value + 1);
 		}
@@ -92,38 +91,5 @@ public class LotteryUtil {
 	}
 	
 	
-	
-//	public static int lottery_easy(List<Card> cards, Double pro) {
-//		
-//		if (cards.isEmpty()) {
-//			// Card（序号，等级，卡名，概率）
-//			cards.add(new Card(0, "0", pro)); 
-//			cards.add(new Card(1, "1", 1-pro));
-//		}
-//				
-//		//读card的概率p，构造原始概率列表Rates
-//		List<Double> Rates = new ArrayList<Double>(cards.size());
-//		for (Card card : cards) {
-//			double p = card.getP();
-//			if (p < 0) {
-//				p = 0;
-//			}
-//			Rates.add(p);
-//		}
-//		
-//		if (Rates == null || Rates.isEmpty()) {
-//			return -1;
-//		}
-//
-//		// 根据区块值来获取抽取到的卡片索引
-//		double r = Math.random();
-//		if(r<=pro) {
-//			return 0;
-//		}
-//		else {
-//			return 1;
-//		}
-//		
-//	}
 	
 }
